@@ -1,0 +1,32 @@
+.navbar {
+    background-color: var(--main-color);
+    position: sticky;
+    color: #fff;
+    padding:15px;
+}
+
+.navLink {
+    color: #fff;
+    font-size: 20px;
+    transition: .4s all;
+}
+.navLink:hover,
+.navLink.active {
+    color: var(--primary-color);
+}
+.btn {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .6s all;
+}
+.btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.navbar-nav.navbar-nav-scroll  {
+    background-color: red;
+}
