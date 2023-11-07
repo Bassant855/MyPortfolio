@@ -1,6 +1,7 @@
 .about {
     background-color: var(--main-color);
-    height: calc(100vh - 95px);
+    min-height: 600px;
+    max-height: 100%;
     color: #fff;
 }
 .aboutContent {
@@ -50,7 +51,7 @@
 @media (max-width:991px) {
     .about {
         padding: 10px 0;
-        height: 130vh;
+       height: 100vh;
     }
     .aboutContent {
         transform: translateY(10%);
