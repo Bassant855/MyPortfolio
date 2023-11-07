@@ -26,7 +26,7 @@ function Navbar1() {
                 navbarScroll
             >
                 <NavLink className={style.navLink} to="/">About</NavLink>
-                <NavLink className={style.navLink} to="/education">Education</NavLink>
+                <NavLink className={style.navLink} to="/experience">Experience</NavLink>
                 <NavLink className={style.navLink} to="/projects">Projects</NavLink>
                 <NavLink className={style.navLink} to="/contact">Contact</NavLink>
         

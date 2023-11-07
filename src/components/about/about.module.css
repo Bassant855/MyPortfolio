@@ -1,19 +1,21 @@
 .about {
     background-color: var(--main-color);
-    padding:63px 0;
+    height: calc(100vh - 95px);
     color: #fff;
 }
 .aboutContent {
-    padding-top: 40px;
+    /* padding-top: 40px; */
     display: flex;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(20%);
 }
 .aboutInfo {
+  
     width: 50%;
     padding: 10px;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
 }
 .aboutInfo h1 {
     font-size: 50px;
@@ -22,6 +24,7 @@
 }
 .aboutInfo p {
     font-size: 1.2rem;
+   
 }
 .imgContainer {
     width: 400px;
@@ -47,9 +50,10 @@
 @media (max-width:991px) {
     .about {
         padding: 10px 0;
+        height: 130vh;
     }
     .aboutContent {
-        padding: 2rem 0;
+        transform: translateY(10%);
         flex-direction: column-reverse;
         justify-content: center;
         text-align: center;

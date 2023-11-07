@@ -1,12 +1,26 @@
 import style from './projects.module.css'
 
 import {myProjects} from '../../data.js'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Projects = () => {
     // const [myPro, setMyPro] = useState([{myProjects}])
     const [porojectPerPage, setPorjectPerPage] = useState(6)
     const [currentPage, setCurrentPage] = useState(1)
+    const [backToUp, setBackToUp] = useState(false)
+
+    const {pathname} = useLocation()
+    useEffect(() => {
+        window.scrollTo({top:0, behavior:'smooth'})
+        // window.addEventListener('scroll', () => {
+        //     if(window.scrollY > 20) {
+        //         setBackToUp(true)
+        //     } else {
+        //         setBackToUp(false)
+        //     }
+        // })
+    },[])
 
     const numOfPages = Math.ceil(myProjects.length / porojectPerPage); //20 / 6 = 4
     const pages = [...Array(numOfPages + 1).keys()].slice(1) 
@@ -19,21 +33,26 @@ const Projects = () => {
   
   
     const prevHandel = () => {
-      if(currentPage !== 1) setCurrentPage(currentPage - 1)
+      if(currentPage !== 1) setCurrentPage(currentPage - 1),
+      window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+    
     }
     const nextHandel = () => {
-      if(currentPage !== numOfPages) setCurrentPage(currentPage + 1)
+        
+      if(currentPage !== numOfPages) setCurrentPage(currentPage + 1) ,
+       window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+    
     }
   return (
     <div className={style.projects}>
         <div className="container pt-4">
-        <h2 className='text-center '>My <span className='c-yellow'>Projects</span></h2>
+        <h2 className={`${style.contHead}`}>My <span className='c-yellow'>Projects</span></h2>
         <div className={style.projectsContainer}>
 
             {
                 visable.map((item) => {
                     return(
-                        <div className={style.pro} key={item.id}>
+                        <div key={item.id} className={style.pro} >
                             <div className={style.proImg}>
                                 <img src={item.img} alt="projct06"
                                 style={{width:'100%', height:'100%',objectFit:'cover', borderRadius:'10px'}} />
@@ -66,8 +85,8 @@ const Projects = () => {
            {/* pages */}
            <div  style={{display:'flex', gap:'10px', alignItems:'center', justifyContent:'center', marginTop:'20px',paddingBottom:'10px'}}>
             <span className='next' onClick={prevHandel}>Prev</span>
-            {pages.map((page) => <span className={`${currentPage === page ? "num active" : "num" } `}
-            onClick={() => setCurrentPage(page)}> {page}</span>)}
+            {pages.map((page,i) => <span key={i} className={`${currentPage === page ? "num active" : "num" } `}
+            onClick={() => {setCurrentPage(page) ,window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}> {page}</span>)}
             <span className='next' onClick={nextHandel}>Next</span>
         </div>
         

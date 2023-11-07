@@ -71,3 +71,15 @@ button:not(:disabled) {
   align-items: center;
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  
+}
+::-webkit-scrollbar-track {
+  background-color: var(--btn-color);
+  height: 15px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--primary-color);
+}

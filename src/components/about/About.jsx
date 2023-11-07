@@ -22,8 +22,8 @@ const About = () => {
                 And Software Development Principles, Looking Forward To Working At An 
                 Innovative Where I Can Devolop My Skills.
                 </p>
-                <button className={style.aboutBtn}>
-                Check Resume 
+                <button download className={style.aboutBtn}>
+                    download CV
                 </button>
             </div>
             <div className={style.imgContainer}>
