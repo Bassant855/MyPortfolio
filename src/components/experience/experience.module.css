@@ -1,6 +1,6 @@
 .experience {
     background-color: var(--main-color);
-    min-height: 600px;
+    min-height: 750px;
     max-height: 100%;
     color: #fff;
 }
@@ -48,13 +48,16 @@
 }
 
 @media (max-width:991px) {
+    .experience {
+        height: 120vh;
+    }
     .expBox {
         width: 80%;
     }
 }
 @media (max-width:450px) {
     .experience {
-        height: 100vh;
+        height: 125vh;
     }
     .expBox {
         width: 100%;
