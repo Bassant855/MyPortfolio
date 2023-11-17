@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import style from './contact.module.css'
 import {GrMail} from 'react-icons/gr'
 import {FaLocationDot} from 'react-icons/fa6'
+import toast from 'react-hot-toast';
 
 
 const Contact = () => {
@@ -18,6 +19,8 @@ const Contact = () => {
         }, (error) => {
             console.log(error.text);
         });
+        e.target.reset()
+        toast.success('Message sent')
        
     };
   

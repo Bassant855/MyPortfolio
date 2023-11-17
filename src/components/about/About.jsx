@@ -1,7 +1,7 @@
 import style from './about.module.css'
 import bassant from '../../assets/bassant.jpeg'
 import {useTypewriter , Cursor} from 'react-simple-typewriter'
-
+import cv from '../../cv.pdf'
 const About = () => {
     const [text] = useTypewriter({
         words:['Front-end Developer'],
@@ -23,7 +23,10 @@ const About = () => {
                 Innovative Where I Can Devolop My Skills.
                 </p>
                 <button download className={style.aboutBtn}>
+                    <a href={cv} download className={style.btnText}>
                     download CV
+                    </a>
+                   
                 </button>
             </div>
             <div className={style.imgContainer}>

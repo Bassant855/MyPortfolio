@@ -65,8 +65,11 @@ const Projects = () => {
                                 }
                                
                             </div>
-                            <h3 className='fs-4'>{item.name}</h3>
-                            <p className='fs-6'>{item.description} </p>
+                            <div className={style.proInfo}>
+                                <h3 className='fs-4'>{item.name}</h3>
+                                <p className='fs-6'>{item.description} </p>
+                            </div>
+                
                             <div className={style.btnCont}>
                                 <a href={item.code} 
                                 target='_blanket'

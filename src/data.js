@@ -8,6 +8,8 @@ import pro7 from "./assets/pro7.jpeg";
 import pro8 from "./assets/pro8.jpeg";
 import pro9 from "./assets/pro9.jpeg";
 import pro10 from "./assets/pro10.jpeg";
+import pro11 from "./assets/pro11.jpeg";
+
 
 
 export const myProjects=[
@@ -19,6 +21,15 @@ export const myProjects=[
         "code":"https://github.com/Bassant855/countries",
         "img":pro6,
         "tools": ["React js","Axios", "Css"]
+    },
+    {
+        "id":11,
+        "name":"Nike Store",
+        "description":"It represents nike products & let you add product to cart.",
+        "live":"https://nike-store-ashy.vercel.app/",
+        "code":"https://github.com/Bassant855/NikeStore",
+        "img":pro11,
+        "tools": ["React js","Redux-toolkit", "Tailwind"]
     },
     {
         "id":2,

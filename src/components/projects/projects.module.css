@@ -19,12 +19,12 @@
 }
 .pro {
     width: 300px;
-    /* height: 300px; */
     padding: 20px;
     border-radius: 10px;
     background-color: #0f2637;
     cursor: pointer;
-    transition:  0.5s ease-in-out 0s
+    transition:  0.5s ease-in-out 0s;
+
 }
 .pro:hover {
     transform: translateY(-10px);
@@ -37,20 +37,25 @@
     height: 200px;
     
 }
+.proInfo {
+    margin-top: 10px;
+}
 
 .proTools {
     color: var(--primary-color);
     background-color: var(--light-blue);
-    padding: 5px 10px;
+    padding: 5px 5px;
     font-size: 16px;
     border-radius: 5px;
-    margin-right: 7px;
+    margin-right: 5px;
     margin-top: 5px;
 }
 .btnCont {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+   
+    gap: 15px;
 }
 .viewBtn {
     color: var(--primary-color);
