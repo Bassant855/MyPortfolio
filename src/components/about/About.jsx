@@ -1,7 +1,7 @@
 import style from './about.module.css'
 import bassant from '../../assets/bassant.jpeg'
 import {useTypewriter , Cursor} from 'react-simple-typewriter'
-import cv from '../../cv.pdf'
+import cv from "../../Bassant's CV.pdf"
 const About = () => {
     const [text] = useTypewriter({
         words:['Front-end Developer'],
